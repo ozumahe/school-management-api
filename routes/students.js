@@ -9,7 +9,6 @@ const {
   deleteStudent,
 } = require("../controllers/students");
 
-const {} = require("../controllers/students");
 
 router.route("/").get(getAllStudents).post(createStudents);
 router

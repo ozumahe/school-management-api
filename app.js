@@ -13,6 +13,7 @@ const connectDB = require("./db/connect");
 
 const authRouter = require("./routes/auth");
 const studentsRouter = require("./routes/students");
+const courseRouter = require("./routes/course");
 
 const notFoundMiddleWare = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
@@ -33,6 +34,7 @@ app.use(xss());
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/students", authenticationMiddleware, studentsRouter);
+app.use("/api/v1/course", authenticationMiddleware, courseRouter);
 
 app.use(notFoundMiddleWare);
 app.use(errorHandlerMiddleware);

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const StudentsSchema = new mongoose.Schema({
+const CourseSchema = new mongoose.Schema({
   title: {
     type: String,
     required: [true, "Course Title  must be Provided"],
@@ -13,4 +13,4 @@ const StudentsSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("courses", StudentsSchema);
+module.exports = mongoose.model("Course", CourseSchema);
